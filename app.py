@@ -1,10 +1,12 @@
 """Streamlit frontend for the emotion-prediction FastAPI service."""
 
+import os
+
 import requests
 import streamlit as st
 
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = os.getenv("EMOTION_API_URL", "http://127.0.0.1:8000").rstrip("/")
 EMOTION_EMOJIS = {
     "anger": "😠",
     "fear": "😨",
