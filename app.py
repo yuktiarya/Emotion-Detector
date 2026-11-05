@@ -6,7 +6,7 @@ import requests
 import streamlit as st
 
 
-API_URL = os.getenv("EMOTION_API_URL", "http://127.0.0.1:8000").rstrip("/")
+API_URL = os.getenv("EMOTION_API_URL", "https://emotion-detector-1-17h4.onrender.com").rstrip("/")
 EMOTION_EMOJIS = {
     "anger": "😠",
     "fear": "😨",
